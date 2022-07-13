@@ -17,7 +17,44 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
 }
+.gdas-menu-left{
+  width: 100%;
+}
+.gdas-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+     background-image: linear-gradient(to right, green, white);
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
 
+.gdas-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+     background-image: linear-gradient(white, white), linear-gradient(to right, green, white);
+     background-attachment: fixed, fixed;
+     background-clip: padding-box, border-box;
+}
+
+.gdas-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+     background-image: linear-gradient(white, white), linear-gradient(to right, green, white);
+     background-attachment: fixed, fixed;
+     background-clip: padding-box, border-box;
+}
     </style>
 </head>
 <body>
@@ -271,7 +308,7 @@
                     <div class="p-3" id="filter-section-0">
                       <div class="space-y-4">
                         <div class="flex items-center">
-                          <input value="30/12/2022" name="start" type="range" class="w-full" placeholder="Select date start">
+                          <span class="gdas-menu-left"> <input  name="start" type="range" class="w-full gdas-range" ></span>
                         </div>
                         <div class="flex items-center relative text-sm">
                           <span class="absolute  left-0" >0%</span>
